@@ -8,7 +8,7 @@ export default function TitleLogo(){
     return(
       <div>
         <main className={styles.main} >
-          <h1 className={styles.titleName}> Learn</h1>
+          <h1> Learn</h1>
         </main >
         <div className={styles.logo}>
           <div className={styles.logo2}>

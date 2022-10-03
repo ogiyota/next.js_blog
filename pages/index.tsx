@@ -21,7 +21,7 @@ const Home: NextPage = ( {blog}:any ) => {
     <div>
       <TitleLogo/>
       <TitleText/>
-      <div>
+      <div className={styles.blogs}>
         <h2 className={styles.titleMassage}>記事一覧</h2>
         <ul className={styles.title}>
           {blog.map((blog : any) => (
