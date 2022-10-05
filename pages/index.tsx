@@ -2,8 +2,8 @@ import type { NextPage } from 'next';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 import { client } from "./libs/client";
-import TitleLogo from './components/titleLogo';
-import TitleText from './components/TitleText';
+import TitleLogo from '../components/titleLogo';
+import TitleText from '../components/TitleText';
 
 //ssg
 export const getStaticProps = async() =>{
