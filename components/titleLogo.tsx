@@ -1,7 +1,7 @@
 import styles from '../styles/Home.module.css';
 import Image from 'next/image';
 import profilePic from '../public/image/logo192.png'
-import profilePic2 from '../public/image/Nextjs.png'
+import profilePic2 from '../public/image/nextjs.png'
 
 
 export default function TitleLogo(){
