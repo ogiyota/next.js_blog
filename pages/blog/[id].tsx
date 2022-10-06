@@ -1,4 +1,5 @@
 import {client} from "../../src/libs/client";
+import Head from "next/head";
 
 export const getStaticProps = async (context : any) => {
     const id =context.params.id;
@@ -21,12 +22,18 @@ export const getStaticPaths = async () => {
 
 export default function BlogId( {blog}:any ) {
     return(
-        <main>
-          <h1 className="titleName">{blog.title}</h1>
-          <div className="word">
-            <div dangerouslySetInnerHTML={{__html: `${blog.body}` }}></div>
-          </div>
-        </main>
+        <div>
+            <Head>
+                <title>{blog.metaTitle}</title>
+                <meta property="description" content={blog.descripution}/>
+            </Head>
+          <main>
+            <h1 className="titleName">{blog.title}</h1>
+            <div className="word">
+              <div dangerouslySetInnerHTML={{__html: `${blog.body}` }}></div>
+            </div>
+          </main>
+        </div>
         
     );
 }

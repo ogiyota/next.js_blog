@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { client } from "../src/libs/client";
 import TitleLogo from '../components/titleLogo';
 import TitleText from '../components/TitleText';
+import Head from 'next/head';
 
 //ssg
 export const getStaticProps = async() =>{
@@ -19,6 +20,14 @@ const Home: NextPage = ( {blog}:any ) => {
 
   return (
     <div>
+      <Head>
+        <title>
+          Learn React and Next.js
+        </title>
+        <meta property='description' content="React・Next.jsを学びたい初学者方向けの学習ブログサイトです"/>
+        <meta property='image' content="../public/image/logo192.png"/>
+        <meta property='twitter:image' content="../public/image/logo192.png"/>
+      </Head>
       <TitleLogo/>
       <TitleText/>
       <div className={styles.blogs}>
