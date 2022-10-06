@@ -1,4 +1,4 @@
-import {client} from "../libs/client";
+import {client} from "../../src/libs/client";
 
 export const getStaticProps = async (context : any) => {
     const id =context.params.id;

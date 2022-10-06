@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
-import { client } from "./libs/client";
+import { client } from "../src/libs/client";
 import TitleLogo from '../components/titleLogo';
 import TitleText from '../components/TitleText';
 
