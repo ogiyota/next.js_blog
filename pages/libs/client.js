@@ -1,7 +1,7 @@
 import { createClient } from "microcms-js-sdk";
 
 export const client = createClient({
-    serviceDomain : "next-react-blog",
+    erviceDomain : process.env.SERVIS_DOMAIN,
     apiKey : process.env.API_KEY,
 });
 
