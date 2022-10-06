@@ -25,8 +25,8 @@ export default function BlogId( {blog}:any ) {
         <div>
             <Head>
                 <title>{blog.metaTitle}</title>
-                <meta property="og:title" content={blog.metaTitle}/>
-                <meta property="og:description" content={blog.descripution}/>
+                <meta property="og:title" content={blog.metaTitle} key="title"/>
+                <meta property="og:description" content={blog.descripution} key="description"/>
             </Head>
           <main>
             <h1 className="titleName">{blog.title}</h1>

@@ -22,8 +22,8 @@ const Home: NextPage = ( {blog}:any ) => {
         <title>
           Learn React and Next.js
         </title>
-        <meta property='og:title' content="Learn React and Next.js" />
-        <meta property='description' content="React・Next.jsを学びたい初学者方向けの学習ブログサイトです"/>
+        <meta property='og:title' content="Learn React and Next.js" key="title"/>
+        <meta property='description' content="React・Next.jsを学びたい初学者方向けの学習ブログサイトです" key="description"/>
         <meta property='image' content="../public/image/logo192.png"/>
         <meta property='twitter:image' content="../public/image/logo192.png"/>
       <TitleLogo/>
