@@ -24,4 +24,15 @@ a {
   width: 90%;
   margin: 0% auto;
   font-size: 1.1rem;
+  line-height: 2rem;
  }
+ .back{
+  padding-top: 2rem;
+  font-size: 1.3rem;
+  margin-right: 1rem;
+}
+.day{
+  text-align: right;
+  font-size: 1.1rem;
+  margin-right: 5%;
+}

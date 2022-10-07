@@ -1,5 +1,9 @@
 import {client} from "../../src/libs/client";
 import Head from "next/head";
+import Router from "next/router";
+import Link from "next/link";
+
+
 
 export const getStaticProps = async (context : any) => {
     const id =context.params.id;
@@ -29,9 +33,17 @@ export default function BlogId( {blog}:any ) {
                 <meta property="og:description" content={blog.descripution} key="description"/>
             </Head>
           <main>
-            <h1 className="titleName">{blog.title}</h1>
+            <h2 className="titleName">{blog.title}</h2>
+            <p className="day">{blog.day}</p>
             <div className="word">
               <div dangerouslySetInnerHTML={{__html: `${blog.body}` }}></div>
+            </div>
+            <div className="back">
+              <Link href={"#"}>
+                <a onClick={() => { Router.back() }}>
+                    ←戻る
+                </a>
+              </Link> 
             </div>
           </main>
         </div>
