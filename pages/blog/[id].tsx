@@ -1,11 +1,18 @@
 import {client} from "../../src/libs/client";
 import Head from "next/head";
-import Router from "next/router";
 import Link from "next/link";
+import { GetStaticProps, GetStaticPaths } from 'next'
+
+interface BlogData {
+  title : string;
+  day : string;
+  blog : any;
+  body : string;
+  
+}
 
 
-
-export const getStaticProps = async (context : any) => {
+export const getStaticProps:GetStaticProps = async (context : any) => {
     const id =context.params.id;
     const data = await client.get( {endpoint: "blog", contentId: id });
 
@@ -15,7 +22,7 @@ export const getStaticProps = async (context : any) => {
         },
     };
 };
-export const getStaticPaths = async () => {
+export const getStaticPaths:GetStaticPaths = async () => {
     const data = await client.get({ endpoint: "blog" });
     const paths = data.contents.map((content: any) => `/blog/${content.id}`);
     return{
@@ -24,7 +31,7 @@ export const getStaticPaths = async () => {
     };
   };
 
-export default function BlogId( {blog}:any ) {
+export default function BlogId( {blog}:BlogData) {
     return(
         <div>
             <Head>

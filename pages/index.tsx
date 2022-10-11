@@ -4,9 +4,16 @@ import Link from 'next/link';
 import { client } from "../src/libs/client";
 import TitleLogo from '../components/titleLogo';
 import TitleText from '../components/TitleText';
+import { GetStaticProps } from 'next'
 
+interface BlogData {
+  title : string;
+  id : string;
+  blog : any
+  
+}
 //ssg
-export const getStaticProps = async() =>{
+export const getStaticProps:GetStaticProps = async() =>{
   const data = await client.get({ endpoint : "blog"});
   return{
     props : {
@@ -15,7 +22,7 @@ export const getStaticProps = async() =>{
   };
 };
 
-const Home: NextPage = ( {blog}:any ) => {
+const Home: NextPage<BlogData> = ( {blog}:BlogData ) => {
 
   return (
     <div>
