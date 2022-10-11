@@ -39,9 +39,9 @@ export default function BlogId( {blog}:any ) {
               <div dangerouslySetInnerHTML={{__html: `${blog.body}` }}></div>
             </div>
             <div className="back">
-              <Link href={"#"}>
-                <a onClick={() => Router.back() }>
-                    ←戻る
+              <Link href={"/"}>
+                <a>
+                  戻る
                 </a>
               </Link> 
             </div>
