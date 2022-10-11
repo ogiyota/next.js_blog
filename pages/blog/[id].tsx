@@ -40,7 +40,7 @@ export default function BlogId( {blog}:any ) {
             </div>
             <div className="back">
               <Link href={"#"}>
-                <a onClick={() => { Router.back() }}>
+                <a onClick={() => Router.back() }>
                     ←戻る
                 </a>
               </Link> 
